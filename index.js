@@ -3,9 +3,7 @@ const path = require('path');
 const app = express();
 
 let secret = process.env.SECRET
-
 let passMap = process.env
-
 
 app.post('/', express.json(), function(req, res) {
 
