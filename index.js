@@ -1,8 +1,9 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
-const cors = cors();
+
 app.use(cors())
 
 let passMap = process.env
