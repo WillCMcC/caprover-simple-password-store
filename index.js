@@ -1,6 +1,9 @@
 const express = require('express');
 const path = require('path');
+
 const app = express();
+const cors = cors();
+app.use(cors())
 
 let passMap = process.env
 let valueMap = {}
