@@ -17,6 +17,7 @@ for(let keyIndex in keys){
   if(keys.indexOf(`return_${key}`) > -1){
     valueMap[key] = passMap[`return_${key}`]
   }
+
 }
 
 app.post('/', express.json(), function(req, res) {
@@ -28,9 +29,13 @@ app.post('/', express.json(), function(req, res) {
     if(valueMap[keys[0]]){
        return res.json(valueMap[keys[0]])
     }
+
     return res.json(true)
+
   }else{
+
     return res.json(false)
+
   }
 });
 
